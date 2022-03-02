@@ -1,0 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+
+    <a class="navbar-brand" href="#" style="font-size: 40px; font-family:Georgia, 'Times New Roman', Times, serif" >Godrej</a>
+    <img src="../../assets/godrej icon.png" style="width: 60px; height: 60px;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="font-size: 16px; margin-left: 70px;">
+       
+            <div class="m-4 outline-buttons" style="margin-left: 150px;">
+             
+                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary">HomeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary">OfficeFurniture</button>
+             
+                <button type="button" class="btn btn-outline-secondary">ShopeFurniture</button>
+             
+                <button type="button" class="btn btn-outline-secondary" routerLink="search">Delet</button></a>
+             
+             
+            </div>
+        </ul>
+      
+    </div>
+</nav>
+<body class="backgrnd">
+    
+<div style="text-align: center">
+    <h1 style="background-color:white">{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center"> <span class="req"><small>
+                                </small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> UserName: <small>This will be your login user
+                                username</small> </label>
+                        <input required type="text"  name="username" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                   
+          
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> Password: </label>
+                        <input class="form-control" required type="password"  name="domain"
+                            id="email" placeholder="Enter Your Password" />
+                        <div class="status" id="status"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"  href="adminhome">LOGIN</a>
+
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+</body>
+

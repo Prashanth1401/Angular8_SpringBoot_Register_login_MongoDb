@@ -1,0 +1,26 @@
+
+
+    
+        
+.pic{
+    float: left;
+}
+body{
+    background-color: rgb(218, 216, 216);
+}
+.head{ 
+     background-color: white;
+    color: rgb(10, 10, 10);
+}
+.logo{ height: 300px; width: 100%;
+    background-color: rgb(141, 32, 32);
+}
+.logo1{ margin-left: 100px;
+    float: right;
+}
+.love{ font-size: medium; margin-left: 100px;padding-top: 20px;
+    color: white;
+}
+.clss{
+    margin-left: 100px;
+}

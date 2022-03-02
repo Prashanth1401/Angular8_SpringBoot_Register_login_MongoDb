@@ -1,0 +1,16 @@
+
+    body{margin-left: 10px;
+        margin-top: 10px;
+     
+       /* background-color: darkcyan;  */
+        /* background-image: url(../../assets/worktable.jpg); */
+    }
+    div,label{   font: bold;
+
+    }
+    
+    .backgrnd{
+  
+         background-image: url(../../assets/sofa.jpg); 
+    }
+    

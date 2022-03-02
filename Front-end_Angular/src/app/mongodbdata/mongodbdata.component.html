@@ -1,0 +1,85 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+
+    <a class="navbar-brand" href="#" style="font-size: 40px; font-family:Georgia, 'Times New Roman', Times, serif" >Godrej</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button><img src="../../assets/godrej icon.png" style="width: 60px; height: 60px;">
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="font-size: 16px;">
+          
+            <li class="nav-item active">
+                <a class="nav-link"  routerLink="register">Register <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" >HomePage</a>
+            </li>
+            
+        </ul>
+ 
+            <input class="form-control m-sm-4" type="search" placeholder="Search" aria-label="Search" style="font-size: 10px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+        
+    </div>
+</nav>
+<div class="back">
+    <div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-200" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With Email Address"  name="email" [(ngModel)]="email"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findUserByEmailId()">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+
+
+<div class="container">
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle" style="height: 100px;">
+    <table class="table table-striped custab">
+    <thead>
+        <tr style="background-color: rgb(247, 239, 239); font-size: 10px; color: black;">
+          
+            <th><h4>UserName</h4></th>
+            <th><h4>Email</h4></th>
+            <th><h4>FurnitureCode</h4></th>
+            <th><h4>FurbituAmount</h4></th>
+            <th><h4>Action</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+          
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.furniturecode}}</td>
+            <td>{{user.furnitureamount}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+
+
+

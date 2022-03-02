@@ -1,0 +1,4 @@
+com\godrej\RegistrationServiceApplication.class
+com\godrej\controller\UserController.class
+com\godrej\dao\UserRepository.class
+com\godrej\model\User.class
