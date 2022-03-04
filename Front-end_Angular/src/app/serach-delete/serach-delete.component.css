@@ -62,6 +62,10 @@
   padding-right: 0px;
   padding-left: 183px;
 }
+.container{
+  background-image: url(../../../sofa.jpg);
+}
+
 .back{
   background-image: url(../../assets/sofa.jpg);
   height: 100%;

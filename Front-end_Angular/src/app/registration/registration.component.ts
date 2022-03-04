@@ -10,7 +10,7 @@ import { UserRegistationService } from '../user-registation.service';
 export class RegistrationComponent implements OnInit {
 
 
-  user: User=new User("","","",0);
+  user: User=new User("","",0,"");
   message:any;
 
   constructor(private service:UserRegistationService) { }
@@ -23,6 +23,5 @@ export class RegistrationComponent implements OnInit {
 let resp=this.service.doRegistration(this.user);
 resp.subscribe((data)=>this.message=data);
   }
-
 
 }

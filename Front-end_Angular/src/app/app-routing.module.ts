@@ -1,5 +1,7 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { RegistrationComponent } from './registration/registration.component';
+import { SerachDeleteComponent } from './serach-delete/serach-delete.component';
 import { AboutComponent } from './about/about.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { BookingComponent } from './booking/booking.component';
@@ -10,9 +12,9 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { MongodbdataComponent } from './mongodbdata/mongodbdata.component';
 import { OfficefurnitureComponent } from './officefurniture/officefurniture.component';
 
-import { RegistrationComponent } from './registration/registration.component';
-import { SerachDeleteComponent } from './serach-delete/serach-delete.component';
+
 import { ShopefurnitureComponent } from './shopefurniture/shopefurniture.component';
+import { ShowlistsComponent } from './showlists/showlists.component';
 
 const routes: Routes = [
   {
@@ -66,7 +68,13 @@ const routes: Routes = [
     {
       path:"mongodb",
       component:MongodbdataComponent
+    },
+    {
+      path:"showlist",
+      component:ShowlistsComponent
     }
+
+
 ];
 
 @NgModule({

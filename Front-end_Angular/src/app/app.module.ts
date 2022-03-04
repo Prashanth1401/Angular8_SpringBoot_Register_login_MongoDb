@@ -5,6 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SerachDeleteComponent } from './serach-delete/serach-delete.component';
+
+
+
+
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { BookingComponent } from './booking/booking.component';
+import { FavoritepageComponent } from './favoritepage/favoritepage.component';
+
+
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { MongodbdataComponent } from './mongodbdata/mongodbdata.component';
+
 import { UserRegistationService } from './user-registation.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -19,11 +31,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { BookingComponent } from './booking/booking.component';
-import { AdminhomeComponent } from './adminhome/adminhome.component';
-import { LoginpageComponent } from './loginpage/loginpage.component';
-import { FavoritepageComponent } from './favoritepage/favoritepage.component';
-import { MongodbdataComponent } from './mongodbdata/mongodbdata.component';
+import { ShowlistsComponent } from './showlists/showlists.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +48,13 @@ import { MongodbdataComponent } from './mongodbdata/mongodbdata.component';
     LoginpageComponent,
     FavoritepageComponent,
     MongodbdataComponent,
-    
+    ShowlistsComponent,
   ],
   imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -53,7 +65,6 @@ import { MongodbdataComponent } from './mongodbdata/mongodbdata.component';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule
-
   ],
   providers: [UserRegistationService],
   bootstrap: [AppComponent]

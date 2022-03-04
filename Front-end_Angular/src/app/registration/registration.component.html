@@ -11,12 +11,12 @@
        
             <div class="m-4 outline-buttons" style="margin-left: 150px;">
              
-                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary">HomeFurniture</button>
-                <button type="button" class="btn btn-outline-secondary">OfficeFurniture</button>
+                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary"><mat-icon>home</mat-icon>HomeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>work_outline</mat-icon>OfficeFurniture</button>
              
-                <button type="button" class="btn btn-outline-secondary">ShopeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>store</mat-icon>ShopeFurniture</button>
              
-                <button type="button" class="btn btn-outline-secondary" routerLink="search">Delet</button></a>
+    </a>
              
              
             </div>
@@ -24,10 +24,9 @@
       
     </div>
 </nav>
-<body class="backgrnd">
-    
+<div style=" background-image: url(../../../sofa.jpg); height: 100%;">
 <div style="text-align: center">
-    <h1 style="background-color:white">{{message}}</h1>
+    <h1 style="background-color: white;">{{message}}</h1>
 </div>
 
 <div class="container">
@@ -39,36 +38,37 @@
                                 </small></span></legend>
 
                     <div class="form-group">
-                        <label for="Name"><span class="req">* </span> UserName: <small>This will be your login user
-                                username</small> </label>
-                        <input required type="text" [(ngModel)]="user.username" name="username" id="name"
+                        <label for="Name" style="background-color: white;"><span class="req">* </span> Name: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.name" name="name" id="name"
                             class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
                     </div>
 
                     <div class="form-group">
-                        <label for="firstname"><span class="req">* </span> Email: </label>
+                        <label for="firstname" style="background-color: white;"><span class="req">* </span> Email: </label>
                         <input class="form-control" type="text" [(ngModel)]="user.email" name="email" id="txt" required
                             placeholder="Enter valid email address" />
                         <div id="errFirst"></div>
                     </div>
 
-          
+                    <div class="form-group">
+                        <label for="lastname" style="background-color: white;"><span class="req">* </span> phonenumber </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.experience" name="experience" id="txt"
+                            placeholder="Total year of experience" required />
+                        <div id="errLast"></div>
+                    </div>
 
                     <div class="form-group">
-                        <label for="email"><span class="req">* </span> Password: </label>
-                        <input class="form-control" required type="password" [(ngModel)]="user.password" name="domain"
-                            id="email" placeholder="Enter Your Password" />
+                        <label for="email" style="background-color: white;"><span class="req">* </span> password </label>
+                        <input class="form-control" required type="password" [(ngModel)]="user.domain" name="domain"
+                            id="email" placeholder="fullstack/backend/developer" />
                         <div class="status" id="status"></div>
                     </div>
                     <div class="form-group">
-                        <label for="lastname"><span class="req">* </span> PhoneNumber: </label>
-                        <input class="form-control" type="number" [(ngModel)]="user.phonenumber" name="experience" id="phonenumber"
-                            placeholder="Enter Your Phonenumber" required />
-                        <div id="errLast"></div>
-                    </div>
-                    <div class="form-group">
-                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"  href="adminhome">register</a>
-                       <a  class="btn btn-danger" type="submit" value="Delet"  style="margin-left: 20px;" href="loginpage">LOGIN</a>
+                     
+                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()" href="adminhome"><mat-icon>account_circle</mat-icon>Register</a>
+                        <!-- <a class="btn btn-danger" type="submit" name="submit_reg" value="show data" href="search">showdata</a> -->
+                        <a  class="btn btn-danger" type="submit" value="Delet"  style="margin-left: 20px;" href="loginpage"><mat-icon>fingerprint</mat-icon>LOGIN</a>
                     </div>
                 </fieldset>
             </form><!-- ends register form -->
@@ -77,5 +77,5 @@
 
     </div>
 </div>
-</body>
+</div>
 

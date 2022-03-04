@@ -1,89 +1,81 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
 
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-
-        <a class="navbar-brand" href="#" style="font-size: 40px; font-family:Georgia, 'Times New Roman', Times, serif" >Godrej</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>  <img src="../../assets/godrej icon.png" style="width: 60px; height: 60px;">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" style="font-size: 16px;">
-               
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="#" ><mat-icon>home</mat-icon></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" ><mat-icon>favorite</mat-icon></a>
-                </li>
-                <i class="fa fa-shopping-cart"></i>
-               
-               
-            </ul>
-           
-                <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
-           
-        </div>
-    </nav>
-    <body class="backgrnd">
-    <div style="text-align: center">
-        <h1 style="background-color:white">{{message}}</h1>
+    <a class="navbar-brand" href="#" style="font-size: 40px; font-family:Georgia, 'Times New Roman', Times, serif" >Godrej</a>
+    <img src="../../assets/godrej icon.png" style="width: 60px; height: 60px;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="font-size: 16px; margin-left: 70px;">
+       
+            <div class="m-4 outline-buttons" style="margin-left: 150px;">
+             
+                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary"><mat-icon>home</mat-icon>HomeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>work_outline</mat-icon>OfficeFurniture</button>
+             
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>store</mat-icon>ShopeFurniture</button>
+             
+                </a>
+             
+             
+            </div>
+        </ul>
+      
     </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <form>
-                    <fieldset>
-                        <legend class="text-center"> <span class="req"><small>
-                                    </small></span></legend>
-    
-                        <div class="form-group">
-                            <label for="Name"><span class="req">* </span> <h5 style="background-color: white;">UserName: </h5><small><h5>
+</nav>
+<div style=" background-image: url(../../../sofa.jpg); height: 100%;">
+<div style="text-align: center">
+    <h1 style="background-color: white;">{{message}}</h1>
+</div>
 
-                           </h5></small> </label>
-                            <input required type="text" [(ngModel)]="user.username" name="name" id="name"
-                                class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="firstname"><span class="req">* </span><h5 style="background-color: white;"> Email:</h5> </label>
-                            <input class="form-control" type="text" [(ngModel)]="user.email" name="email" id="txt" required
-                                placeholder="Enter valid email address" />
-                            <div id="errFirst"></div>
-                        </div>
-    
-              
-    
-                        <div class="form-group">
-                            <label for="email"><span class="req">* </span> <h5 style="background-color: white;" >FurnitureCode</h5> </label>
-                            <input class="form-control" required type="text" [(ngModel)]="user.furniturecode" name="domain"
-                                id="email" placeholder="Enter The Furniture Code" />
-                            <div class="status" id="status"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname"><span class="req">* </span><h5 style="background-color: white;"> Furniture Amount</h5> </label>
-                            <input class="form-control" type="text" [(ngModel)]="user.furnitureamount" name="experience" id="txt"
-                                placeholder="Enter The Furniture Amount" required />
-                            <div id="errLast"></div>
-                        </div>
-                        <input type="file">
-                        <div class="form-group">
-                            <input class="btn btn-success" type="submit" name="submit_reg" value="UPLOAD" (click)="registerNow()">
-                            <a  class="btn btn-danger" type="submit" value="HOME" href="#">SIGN OUT</a>
-                            <a  class="btn btn-success" type="submit" value="HOME" href="mongodb">ShowData</a>
-                        </div>
-                    </fieldset>
-                </form><!-- ends register form -->
-                <!-- second for to fiter user-->
-            </div><!-- ends col-6 -->
-    
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                
+
+                    <div class="form-group">
+                        <label for="Name" style="background-color: white;"><span class="req">* </span> Name: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.name" name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group" >
+                        <label for="firstname" style="background-color: white;"><span class="req">* </span > Email: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.email" name="email" id="txt" required
+                            placeholder="Enter valid email address" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname" style="background-color: white;"><span class="req">* </span> productbrand </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.experience" name="experience" id="txt"
+                            placeholder="Total year of experience" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" style="background-color: white;"><span class="req">* </span> productcode </label>
+                        <input class="form-control" required type="password" [(ngModel)]="user.domain" name="domain"
+                            id="email" placeholder="fullstack/backend/developer" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group"><mat-icon style="height: 10px;">add_photo_alternate</mat-icon>
+                     <input type="file">
+                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()" ><mat-icon>backup</mat-icon>UploadData</a>
+                        <!-- <a class="btn btn-danger" type="submit" name="submit_reg" value="show data" href="search">showdata</a> -->
+                        <a  class="btn btn-danger" type="submit" value="Delet"  style="margin-left: 20px;" href="homepage"><mat-icon>settings_power</mat-icon>LogOut</a>
+                        <a  class="btn btn-success" type="submit" value="Delet"  style="margin-left: 20px;" href="mongodb"><mat-icon>shopping_cart</mat-icon>ShowData</a>
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
     </div>
-</body>
-
+</div>
+</div>
 

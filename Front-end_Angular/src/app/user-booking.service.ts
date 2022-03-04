@@ -14,14 +14,14 @@ export class UserBookingService {
   }
 
    public getUsers(){
-     return this.http.get("http://localhost:9003/getAllusers");
+     return this.http.get("http://localhost:9003/api/v2/getAllUsers");
    }
 
   public getUserByEmail(email){
     return this.http.get("http://localhost:9003/findUser/"+email);
   }
 
-  public deleteUser(id){
-    return this.http.delete("http://localhost:9003/cancel/"+id);
-  }
+  // public deleteUser(id){
+  //   return this.http.delete("http://localhost:9003/cancel/"+id);
+  // }
 }

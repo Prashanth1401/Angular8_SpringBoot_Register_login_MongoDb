@@ -9,10 +9,10 @@ export class MongodbdataComponent implements OnInit {
   users:any;
   email:string;
   constructor(private service:UserBookingService) { }
-  public delteUser(id:number){
-    let resp= this.service.deleteUser(id);
-    resp.subscribe((data)=>this.users=data);
-   }
+  // public delteUser(id:number){
+  //   let resp= this.service.deleteUser(id);
+  //   resp.subscribe((data)=>this.users=data);
+  //  }
    
    public findUserByEmailId(){
      let resp= this.service.getUserByEmail(this.email);

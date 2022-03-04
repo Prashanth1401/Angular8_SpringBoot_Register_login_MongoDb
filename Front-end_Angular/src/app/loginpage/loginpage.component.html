@@ -11,12 +11,12 @@
        
             <div class="m-4 outline-buttons" style="margin-left: 150px;">
              
-                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary">HomeFurniture</button>
-                <button type="button" class="btn btn-outline-secondary">OfficeFurniture</button>
+                <a routerLink="homefurnitur"><button type="button" class="btn btn-outline-secondary"><mat-icon>home</mat-icon>HomeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>work_outline</mat-icon>OfficeFurniture</button>
              
-                <button type="button" class="btn btn-outline-secondary">ShopeFurniture</button>
+                <button type="button" class="btn btn-outline-secondary"><mat-icon>store</mat-icon>ShopeFurniture</button>
              
-                <button type="button" class="btn btn-outline-secondary" routerLink="search">Delet</button></a>
+                </a>
              
              
             </div>
@@ -39,7 +39,7 @@
                                 </small></span></legend>
 
                     <div class="form-group">
-                        <label for="Name"><span class="req">* </span> UserName: <small>This will be your login user
+                        <label for="Name" style="background-color: white;"><span class="req">* </span> UserName: <small>This will be your login user
                                 username</small> </label>
                         <input required type="text"  name="username" id="name"
                             class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
@@ -49,14 +49,14 @@
           
 
                     <div class="form-group">
-                        <label for="email"><span class="req">* </span> Password: </label>
+                        <label for="email" style="background-color: white;"><span class="req">* </span> Password: </label>
                         <input class="form-control" required type="password"  name="domain"
                             id="email" placeholder="Enter Your Password" />
                         <div class="status" id="status"></div>
                     </div>
             
                     <div class="form-group">
-                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"  href="adminhome">LOGIN</a>
+                        <a class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()"  href="adminhome"><mat-icon>fingerprint</mat-icon>LOGIN</a>
 
                     </div>
                 </fieldset>

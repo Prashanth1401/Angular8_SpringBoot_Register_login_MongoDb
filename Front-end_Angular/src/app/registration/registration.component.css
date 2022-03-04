@@ -1,11 +1,7 @@
 
 body {
-    padding-top:10px;
-
-}
-.backgrnd{
-  
-    background-image: url(../../assets/sofa.jpg);
+    padding-top:50px;
+    background-image: url(../../../sofa.jpg);
 }
 fieldset {
     border: thin solid #ccc; 
@@ -26,7 +22,4 @@ label small {
 span.req {
     color:maroon;
     font-size: 112%;
-}
-.text-center{
-    padding-top: -30px;
 }
